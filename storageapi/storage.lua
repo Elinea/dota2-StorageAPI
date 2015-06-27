@@ -1,4 +1,4 @@
-STORAGEAPI_API_URL = "http://dota2.tools/api/v1/storage/"
+STORAGEAPI_API_URL = "http://dota2.tools/api/v1/storage"
 
 --[[
 	Storage API interface to store data for Dota 2 Custom Game players.
