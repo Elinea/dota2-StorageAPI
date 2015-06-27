@@ -9,6 +9,9 @@
 ##Usage
 
 ```lua
+require('storageapi/json')
+require('storageapi/storage')
+
 Storage:SetApiKey(api_key)
 
 Storage:put( steam_id, data, function( resultTable, successBool )
@@ -26,23 +29,24 @@ end)
 
 ##Testing
 `GET: STORAGEAPI_API_URL?api_key=<api_key>&steam_id=<steam_id>`
+
 `PUT (POST): STORAGEAPI_API_URL?api_key=<api_key>&steam_id=<steam_id>&data=<json>`
 
 ##Server
 
-GET with query string `api_key=<api_key>&steam_id=<steam_id>` should return
+`GET` with query string `api_key=<api_key>&steam_id=<steam_id>` should return
 ```json
 {
 	"data": {
-		"api_key": "api key",
-		"steam_id": "steam id",
+		"api_key": string,
+		"steam_id": string,
 		"data": {
-			"json object"
+			json_object
 		}
 	}
 }
 ```
-POST with query string `api_key=<api_key>&steam_id=<steam_id>&data=<json>` should return
+`POST` with query string `api_key=<api_key>&steam_id=<steam_id>&data=<json>` should return
 ```json
 {
   "data": {
