@@ -11,13 +11,13 @@ STORAGEAPI_API_URL = "http://dota2.tools/api/v1/storage/"
 
 		Storage:SetApiKey(api_key)
 
-		Storage:put( steam_id, data, function( resultTable, successBool )
+		Storage:Put( steam_id, data, function( resultTable, successBool )
 			if successBool then
 				print("Successfully put data in storage")
 			end
 		end)
 
-		Storage:get( steam_id, function( resultTable, successBool )
+		Storage:Get( steam_id, function( resultTable, successBool )
 			if successBool then
 				DeepPrintTable(resultTable)
 			end
